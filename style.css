@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Bebas+Neue&family=Passion+One:wght@400;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Bebas+Neue&family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+
+:root{
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: "Passion One", cursive;
+    --fonte3: "Sriracha", cursive;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    min-height: 100vh;
+    background-color: blue;
+
+}
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family:var(--fonte2);
+}
+
+header > h1 {
+    padding-top: 50px;
+    /*text-transform: uppercase; Tranforma todas as letras contidas na caixa em maiúsculas*/
+    font-variant: small-caps;/*Também deixa todas as letras maiúsculas porém ele respeita as letras inicias e as deixa com tamanho maior*/
+    font-family: var(--fonte2);
+    font-size: 10vw;/*Para uma melhor adaptação para diversos tamanhos de tela, configuramos o tamanho da fonte em 10% do tamanho da tela, assim idependente da teal, seja se desktop, seja tablet ou celular o tamanho vai ser proporcional e adaptável. Vale lembra que o mediaQuerry é melho maneira de se fazer isso, mas como ainda não estamos neste nível, vamos usar o que temos por enquanto.*/
+    font-weight: normal;
+}
+header > p {
+
+    background-color: black;
+    padding-bottom: 50px;
+    font-family: var(--fonte1);
+    font-size: 1.2vw;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+footer > p {
+    font-family: var(--fonte1);
+    font-size: 1em;
+}
+
+section {
+    padding-top: 10vh;/*Aqui definimos que as nossas sections iram ter 10% da altura da tela no topo. Isso pode ser feito através de porentagem também.*/
+    padding-bottom: 10vh;/*Aqui definimos que as nossas sections iram ter 10% da altura da tela em baixo. Isso pode ser feito através de porentagem também.*/
+    line-height: 2em;/*Permite alterar os espaços entre linhas. Neste caso estamos usando um espaçamento duplo com o 2em*/
+    padding-left: 30px;
+    font-size: 2.5vw;
+    font-family: var(--fonte3);
+}
+
+section > p {
+    padding-bottom: 2em;/*Foi usado para resolver o espaçamento nas sections que tinham parágrafos duplos. Agora temos um espaço de 2x o espaçamento original separando um parágrafo e outro*/
+}
+section.imagem-fundo > p {
+    display: inline-block;/*Usamos para fazer com que a caixa que está envolvendo o parágrafo se adapte ao tamanho dele seja em altura ou largura*/
+    background-color: rgba(0, 0, 0, 0.500);
+    padding: 10px;/*Serve para não deixar as letras do verso a garradas no limite da caixa de fundo.*/
+    text-shadow: 1px 1px 0px black;
+    
+}
+
+section.imagem-fundo {
+    background-color: rgb(55, 55, 60);
+    color: white;
+    box-shadow: inset 6px/*Espalhamento horizontal*/ 6px/*Espalhamento Vertical*/ 15px/*Espalhamento*/ 0px/*Ampliação*/ rgba(0, 0, 0, 0.63);
+    background-size: cover;/*Serve para ajustar a imagem mesmo que precise corta-la para que ocupe a tela inteira. Sua vantagem é uma melhor adaptação a qualquer tamanho de tela.*/
+}
+
+section.normal{
+    background-color: white;
+    color: black;
+}
+
+section#img-01 {
+    background-image: url('imagens/background001.jpg');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+section#img-02 {
+    background-image: url('imagens/background002.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
